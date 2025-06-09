@@ -1,0 +1,208 @@
+✅ 30-Day Bash Mastery Plan
+Each day includes a topic, practice task, and optionally a bonus challenge to level up faster.
+
+🔹 WEEK 1: Foundations
+📅 Day 1 – Basic Shell Commands
+Learn: ls, cd, pwd, mkdir, rm, cp, mv
+
+Task: Create and organize a directory structure for your scripts.
+
+Bonus: Write a script that creates folders for Projects, Logs, and Backups.
+
+📅 Day 2 – File & Text Handling
+Learn: cat, less, more, head, tail, touch
+
+Task: Create and display dummy log files.
+
+Bonus: Tail a file in real time and extract specific log lines.
+
+📅 Day 3 – Redirection & Pipes
+Learn: >, >>, 2>, |, tee
+
+Task: Write a script to log command output and errors.
+
+Bonus: Use tee to save and display output.
+
+📅 Day 4 – Variables & Arithmetic
+Learn: Variables, $(( )), let, expr
+
+Task: Write a script that takes two numbers and returns sum, diff, product.
+
+Bonus: Accept inputs as command-line arguments.
+
+📅 Day 5 – Conditionals
+Learn: if, else, elif, [ ], [[ ]]
+
+Task: Check if a file exists and print its type.
+
+Bonus: Add checks for directory, symlink, and permissions.
+
+📅 Day 6 – Loops (for, while)
+Learn: for, while, until
+
+Task: Loop through files and count lines in each.
+
+Bonus: Use while read to parse a CSV file.
+
+📅 Day 7 – Functions
+Learn: Writing and calling functions in a script.
+
+Task: Create a function to display disk space in human-readable form.
+
+Bonus: Add a logging function used by multiple scripts.
+
+🔹 WEEK 2: Real Scripting
+📅 Day 8 – User Input & Arguments
+Learn: $1, $2, $@, $#, read
+
+Task: Write a script that greets users by name or prompts for it.
+
+Bonus: Handle missing input gracefully.
+
+📅 Day 9 – Scheduling with Cron
+Learn: crontab, schedule tasks
+
+Task: Write a backup script and schedule it with cron.
+
+Bonus: Send an email after backup completes.
+
+📅 Day 10 – String Operations
+Learn: ${#var}, ${var:offset:length}, string comparison
+
+Task: Create a script to parse a filename into name and extension.
+
+Bonus: Add string trimming and upper/lower conversion.
+
+📅 Day 11 – Arrays & Loops
+Learn: arr=(one two three), ${arr[@]}, loop over array
+
+Task: Create an array of services and check their status.
+
+Bonus: Colorize the output for up/down status.
+
+📅 Day 12 – File I/O
+Learn: read, redirection, while read line
+
+Task: Write a script that reads a text file and counts words per line.
+
+Bonus: Output results to a CSV file.
+
+📅 Day 13 – Error Handling & Debugging
+Learn: set -e, set -x, trap, return codes $?
+
+Task: Add error handling to a script.
+
+Bonus: Create a reusable error logger.
+
+📅 Day 14 – Script Packaging
+Learn: Making scripts executable, placing in PATH
+
+Task: Organize your scripts into a project directory and create a README.
+
+Bonus: Add a help section (--help) to one script.
+
+🔹 WEEK 3: Advanced Tools & Scripting
+📅 Day 15 – sed Basics
+Learn: Search, replace, delete lines
+
+Task: Mask email addresses in a log file.
+
+Bonus: Replace all IPs with [REDACTED].
+
+📅 Day 16 – awk Basics
+Learn: Print columns, conditions, patterns
+
+Task: Extract IPs and response times from a log.
+
+Bonus: Output average response time.
+
+📅 Day 17 – grep, cut, sort, uniq
+Learn: Text filtering and analysis
+
+Task: Find top 5 most frequent errors in a log.
+
+Bonus: Create a reusable log-analyzer script.
+
+📅 Day 18 – Script Menus
+Learn: select, case
+
+Task: Build a menu script for disk info, RAM usage, or uptime.
+
+Bonus: Add ASCII art or colored output.
+
+📅 Day 19 – getopts for Flags
+Learn: Handling options like -h, -f filename
+
+Task: Add flag parsing to your backup script.
+
+Bonus: Handle invalid options gracefully.
+
+📅 Day 20 – Environment Variables & Exports
+Learn: export, .bashrc, .bash_profile
+
+Task: Create your own .bash_aliases and source it.
+
+Bonus: Add a script to set dev environments.
+
+📅 Day 21 – Shell Script Installer
+Task: Write an installer script that:
+
+Copies your scripts to /usr/local/bin
+
+Sets permissions
+
+Adds help info
+
+🔹 WEEK 4: Projects, Optimization, Security
+📅 Day 22 – Automation Project Start
+Pick a project:
+
+File backup with logging
+
+Log file monitor
+
+Daily report generator
+
+📅 Day 23 – Bash Script with Logging
+Implement logging levels: INFO, WARN, ERROR
+
+📅 Day 24 – Secure Scripting
+Avoid dangerous patterns (eval, rm -rf *)
+
+Add user checks (id, whoami)
+
+📅 Day 25 – Multi-Script Collaboration
+One script calls others as modules (functions or CLI tools)
+
+📅 Day 26 – Bash and Git
+Initialize a Git repo for your scripts
+
+Add README, LICENSE, and .gitignore
+
+📅 Day 27 – ShellCheck and Linting
+Use shellcheck.net or install locally
+
+Fix all warnings in a few scripts
+
+📅 Day 28 – Performance Tips
+Use efficient loops, avoid cat abuse
+
+Compare script speed with time
+
+📅 Day 29 – Final Project Polishing
+Add help text, logging, error handling, usage examples
+
+📅 Day 30 – Share & Document
+Write a blog post or README about your project
+
+Push to GitHub or share with your team
+
+🛠 Tools & Resources
+ShellCheck: https://www.shellcheck.net/
+
+ExplainShell: https://explainshell.com/
+
+Bash Manual: man bash
+
+GitHub inspiration: Search bash scripts repositories
+
