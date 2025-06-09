@@ -1,0 +1,145 @@
+👔 Python for DevOps: Interview Preparation Suit
+This preparation is divided into 5 key domains, each with important topics, sample questions, and practical exercises to help you get truly job-ready.
+
+🔹 1. Python Foundations (Must-Know)
+✅ Topics to Cover:
+Data types (dict, list, tuple, set)
+
+Loops, conditionals
+
+Functions (with *args, **kwargs)
+
+List comprehensions
+
+String manipulation
+
+Error handling (try-except, finally)
+
+File I/O
+
+🧠 Sample Questions:
+What’s the difference between a list and a tuple?
+
+How do you handle exceptions in Python?
+
+Write a function to reverse a string without using slicing.
+
+🛠️ Exercise:
+Write a script to parse a .log file and count the frequency of each log level (INFO, ERROR, etc.).
+
+🔹 2. DevOps-Oriented Python Scripting
+✅ Topics to Cover:
+Working with os, subprocess, shutil, and pathlib
+
+Automating system tasks (disk usage, service status)
+
+Remote execution with paramiko or fabric
+
+Parsing config files (json, yaml, .env)
+
+Scheduling tasks (cron, schedule lib)
+
+🧠 Sample Questions:
+How do you run a shell command in Python and capture output?
+
+How would you SCP files to a remote server using Python?
+
+🛠️ Exercise:
+Write a script to check disk usage and send an alert email if usage exceeds 90%.
+
+🔹 3. Python & CI/CD Automation
+✅ Topics to Cover:
+Using Python in Jenkins, GitLab CI, or GitHub Actions
+
+Writing scripts to trigger builds, deployments, or rollbacks
+
+API calls using requests to CI tools or cloud platforms
+
+Docker control via Python (docker-py)
+
+YAML handling for pipelines
+
+🧠 Sample Questions:
+How can you use Python to trigger a Jenkins build?
+
+Write a Python script to validate a docker-compose.yml file.
+
+🛠️ Exercise:
+Build a Python script that updates a Kubernetes deployment YAML file and pushes changes to Git.
+
+🔹 4. Infrastructure & Monitoring Integration
+✅ Topics to Cover:
+AWS SDK (boto3) for managing EC2, S3, IAM
+
+Monitoring with Prometheus APIs or alert parsing
+
+Using Python for Ansible custom modules
+
+Log parsing and reporting
+
+🧠 Sample Questions:
+How would you use Python to list all EC2 instances in a specific region?
+
+Can you use Python to create a CloudWatch alert?
+
+🛠️ Exercise:
+Create a script that retrieves CPU usage metrics from Prometheus and prints them as a chart (use matplotlib).
+
+🔹 5. Code Quality, Testing & Best Practices
+✅ Topics to Cover:
+Writing testable scripts (unittest, pytest)
+
+Code style (PEP8, flake8, black)
+
+Packaging scripts for reuse (setup.py, requirements.txt)
+
+Logging (logging module)
+
+Environment management (virtualenv, venv, pipenv)
+
+🧠 Sample Questions:
+How do you structure a Python project?
+
+What's the difference between pytest and unittest?
+
+🛠️ Exercise:
+Refactor one of your DevOps scripts to include:
+
+Logging
+
+Unit tests
+
+Config file for parameters
+
+📚 Bonus Resources
+Books:
+
+Automate the Boring Stuff with Python (Al Sweigart)
+
+Python for DevOps (Noah Gift)
+
+Repos to Explore:
+
+devops-exercises (GitHub)
+
+awesome-python
+
+Practice Platforms:
+
+Exercism.io – Python track
+
+Hackerrank – Python & DevOps tracks
+
+🎯 Final Project for Interview Readiness
+Build a Python tool that:
+
+Monitors a folder for log files
+
+Parses them for errors
+
+Uploads results to S3
+
+Triggers a Slack alert if error count > threshold
+
+Scheduled via cron
+
