@@ -1,0 +1,37 @@
+#starting with Ansible
+
+pre-requisites:
+
+have a cloud account
+
+here AWS
+
+IAC:
+Template
+Provisioning
+config management
+
+Ansible puppet chef are conf management tool
+
+Ansible work on a push -> agent is not required
+chef pull mechanism
+
+single machine we can control multiple servers
+
+step 1:
+ Enable password less authentication for master to slave servers
+windows : win rm
+linux ssh key gen
+
+create 3 EC2 
+1 should be master
+attach ssh pub key to other nodes
+
+then install ansible on master
+
+go to ansible website find the syntax 
+
+1st you have to create inventory
+
+
+
