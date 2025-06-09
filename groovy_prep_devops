@@ -1,0 +1,153 @@
+👔 Groovy Scripting Prep Suit – DevOps Edition
+This preparation plan is structured in 5 levels, each focusing on real-world DevOps tasks where Groovy is commonly used — especially Jenkins DSL and shared libraries.
+
+🔹 LEVEL 1: Groovy Language Basics (Essentials)
+✅ Topics to Learn:
+Syntax & Structure
+
+Variables & Data Types
+
+Lists, Maps, Closures
+
+Loops, Conditionals
+
+Functions & Classes
+
+String Interpolation
+
+🧠 Sample Questions:
+What’s a closure in Groovy?
+
+How do lists and maps differ in Groovy compared to Python?
+
+🛠️ Practice:
+Write a script to iterate over a list of services and print their status.
+
+Create a Groovy function that returns the largest of three numbers.
+
+🔹 LEVEL 2: Jenkins Pipeline with Groovy
+✅ Topics to Learn:
+Declarative vs Scripted Pipelines
+
+Pipeline syntax (pipeline {}, stages, steps)
+
+Variables in pipelines
+
+Using environment {} and params {}
+
+Retry, timeout, and error handling
+
+Parallel stages
+
+🧠 Sample Questions:
+Explain the difference between declarative and scripted pipelines.
+
+How do you pass parameters between pipeline stages?
+
+🛠️ Practice:
+Create a Jenkinsfile to:
+
+Checkout code
+
+Run a build
+
+Deploy on success
+
+Add error handling and notification logic
+
+🔹 LEVEL 3: Advanced Groovy for Jenkins
+✅ Topics to Learn:
+Shared Libraries (vars/, src/, resources/)
+
+Custom pipeline steps
+
+Groovy HTTP client for API calls
+
+File I/O and dynamic pipelines
+
+Using Groovy classes inside Jenkins shared libraries
+
+🧠 Sample Questions:
+How would you create a reusable pipeline function for Slack notifications?
+
+What are the advantages of using shared libraries?
+
+🛠️ Practice:
+Build a shared library that includes:
+
+A custom notification step
+
+A reusable deployment pipeline
+
+Parameterized build logic
+
+🔹 LEVEL 4: DevOps Tool Integration
+✅ Topics to Learn:
+API Calls with Groovy (e.g., Jenkins REST API, GitHub, Docker)
+
+Parsing JSON and XML (JsonSlurper, XmlSlurper)
+
+Shell execution inside Groovy scripts (sh, bat)
+
+Groovy with Docker agents in pipelines
+
+🧠 Sample Questions:
+How do you parse JSON in Groovy?
+
+How do you trigger an external API call from a Jenkins pipeline?
+
+🛠️ Practice:
+Script that:
+
+Reads a JSON config
+
+Pulls and tags a Docker image
+
+Sends results via API to Slack or Mattermost
+
+🔹 LEVEL 5: Best Practices & Real-World Readiness
+✅ Topics to Learn:
+Using try-catch for robust scripts
+
+Jenkinsfile modularization
+
+Logging and verbosity control
+
+Security best practices in scripted steps
+
+🧠 Sample Questions:
+How do you handle secrets and credentials in Jenkins pipelines?
+
+How can Groovy scripts be made more maintainable in DevOps environments?
+
+🛠️ Final Project:
+Build a realistic multi-stage Jenkins pipeline that:
+
+Uses parameters and secrets
+
+Calls an external API
+
+Deploys an app via Docker/Kubernetes
+
+Sends a Slack alert with success/failure status
+
+🎯 BONUS: Groovy & DevOps Quick Reference
+Use Case	Groovy Feature
+Jenkins Pipelines	Declarative + Scripted
+JSON Config Parsing	JsonSlurper
+REST API Integration	URL().getText() or HttpBuilder
+Modularization	Shared Libraries
+Shell Execution	sh "command" or bat
+Dynamic Stages	Groovy collections + loops
+
+
+📚 Resources
+📘 Jenkins Pipeline Syntax
+
+📘 Groovy Language Documentation
+
+🔧 Groovy DSL Cheat Sheet for Jenkins
+
+🎥 YouTube: "Groovy Scripting for Jenkins Beginners"
+
+💻 Practice: Spin up Jenkins locally or use play-with-docker for free Jenkins + Docker sandbox
