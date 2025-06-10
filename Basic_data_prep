@@ -1,0 +1,69 @@
+🐍 Basic Python Data Types Practice Tasks
+1. Strings
+Reverse a string without using slicing.
+
+Check if a string is a palindrome.
+
+Count the number of vowels in a string.
+
+Convert a string to uppercase and lowercase.
+
+Replace all spaces in a string with underscores.
+
+Find the first non-repeating character in a string.
+
+2. Numbers (int, float)
+Write a program to check if a number is prime.
+
+Find the factorial of a given number.
+
+Calculate the sum of digits of a number.
+
+Convert a decimal number to binary and vice versa.
+
+Find the greatest common divisor (GCD) of two numbers.
+
+3. Lists
+Find the largest and smallest number in a list.
+
+Remove duplicates from a list.
+
+Merge two lists and sort the result.
+
+Find the second largest number in a list.
+
+Count the occurrence of each element in a list.
+
+Reverse a list without using the reverse() method.
+
+4. Tuples
+Convert a list to a tuple and vice versa.
+
+Unpack a tuple into variables.
+
+Find the index of an element in a tuple.
+
+Count the number of times an element appears in a tuple.
+
+5. Dictionaries
+Create a dictionary from two lists (keys and values).
+
+Find the key with the maximum value.
+
+Merge two dictionaries.
+
+Invert keys and values in a dictionary.
+
+Check if a key exists in a dictionary.
+
+Count the frequency of characters in a string using a dictionary.
+
+6. Sets
+Find the union, intersection, and difference of two sets.
+
+Check if a set is a subset or superset of another set.
+
+Remove duplicates from a list using a set.
+
+Find common elements between two lists using sets.
+
