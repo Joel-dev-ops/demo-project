@@ -1,0 +1,23 @@
+| Function                       | Purpose                                                           |
+| ------------------------------ | ----------------------------------------------------------------- |
+| `cmake_minimum_required()`     | Set the minimum CMake version required to process the script.     |
+| `project()`                    | Define the name and supported languages of the project.           |
+| `add_executable()`             | Define an executable target and the source files it needs.        |
+| `add_library()`                | Define a library target (static or shared).                       |
+| `target_link_libraries()`      | Link a target with other libraries.                               |
+| `include_directories()`        | Add directories to the include path (old way, now discouraged).   |
+| `target_include_directories()` | Set include paths **per target** (modern CMake).                  |
+| `find_package()`               | Find and configure external packages (like Boost, Qt, etc.).      |
+| `add_subdirectory()`           | Add another CMake directory to the build (used for subprojects).  |
+| `set()`                        | Define variables.                                                 |
+| `option()`                     | Define a configurable ON/OFF build option.                        |
+| `if() / elseif() / else()`     | Conditional logic.                                                |
+| `foreach()` / `while()`        | Looping constructs.                                               |
+| `message()`                    | Print messages to the console during configuration.               |
+| `install()`                    | Define installation rules.                                        |
+| `configure_file()`             | Copy and optionally configure a file for output.                  |
+| `file()`                       | Manipulate files and directories (read, write, copy, glob, etc.). |
+| `add_custom_command()`         | Add custom shell commands to build process.                       |
+| `add_custom_target()`          | Create a custom target that can run commands.                     |
+| `enable_testing()`             | Enable testing support via `CTest`.                               |
+| `add_test()`                   | Add a test to be run with CTest.                                  |
