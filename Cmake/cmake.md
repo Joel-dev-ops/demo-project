@@ -444,3 +444,183 @@ cmake -DENABLE_TESTS=ON ..
 make
 ctest
 sudo make install
+
+
+
+Here's a comprehensive CMake script that covers almost all major aspects of CMake used in real-world C++ projects. It is commented and structured in a way that will help you understand:
+
+Project setup
+
+Variables & options
+
+Targets (executables/libraries)
+
+Linking
+
+Configurations
+
+Installation
+
+Testing
+
+Packaging
+
+External dependencies (via FetchContent)
+
+Custom commands & build types
+
+This script should prepare you well for most CMake interview questions, both theoretical and practical.
+
+📁 Project Structure (Example)
+MyApp/
+│
+├── CMakeLists.txt              <-- main CMake file (provided below)
+├── src/
+│   ├── main.cpp
+│   └── utils.cpp
+│   └── utils.h
+├── include/
+│   └── myapp/
+│       └── lib.hpp
+├── tests/
+│   └── test_main.cpp
+└── cmake/
+    └── CustomConfig.cmake      <-- example of custom CMake module
+
+✅ Complete CMakeLists.txt
+cmake_minimum_required(VERSION 3.20)
+
+# ----------------------------
+# 1. Project Declaration
+# ----------------------------
+project(MyApp
+    VERSION 1.0.0
+    DESCRIPTION "A sample project demonstrating full CMake features"
+    LANGUAGES CXX
+)
+
+# ----------------------------
+# 2. Set C++ Standard
+# ----------------------------
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
+# ----------------------------
+# 3. Options for Build Config
+# ----------------------------
+option(BUILD_SHARED_LIBS "Build using shared libraries" ON)
+option(ENABLE_TESTING "Enable tests" ON)
+option(USE_EXTERNAL_LIB "Use external library" OFF)
+
+# ----------------------------
+# 4. Include Custom CMake Modules
+# ----------------------------
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+include(CustomConfig OPTIONAL)  # Can define extra macros, etc.
+
+# ----------------------------
+# 5. Output Directories
+# ----------------------------
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+
+# ----------------------------
+# 6. Source Files
+# ----------------------------
+file(GLOB_RECURSE SRC_FILES CONFIGURE_DEPENDS
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp"
+)
+
+# ----------------------------
+# 7. Header Files
+# ----------------------------
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
+
+# ----------------------------
+# 8. Create Library
+# ----------------------------
+add_library(myapp_lib ${SRC_FILES})
+target_include_directories(myapp_lib PUBLIC include)
+
+# ----------------------------
+# 9. Add Executable
+# ----------------------------
+add_executable(myapp src/main.cpp)
+target_link_libraries(myapp PRIVATE myapp_lib)
+
+# ----------------------------
+# 10. External Dependencies (e.g., fmt)
+# ----------------------------
+if(USE_EXTERNAL_LIB)
+    include(FetchContent)
+    FetchContent_Declare(
+        fmt
+        GIT_REPOSITORY https://github.com/fmtlib/fmt.git
+        GIT_TAG 10.2.1
+    )
+    FetchContent_MakeAvailable(fmt)
+    target_link_libraries(myapp PRIVATE fmt::fmt)
+endif()
+
+# ----------------------------
+# 11. Build Type
+# ----------------------------
+if(NOT CMAKE_BUILD_TYPE)
+    set(CMAKE_BUILD_TYPE Debug CACHE STRING
+        "Choose the type of build." FORCE)
+endif()
+
+# ----------------------------
+# 12. Testing
+# ----------------------------
+if(ENABLE_TESTING)
+    enable_testing()
+    add_subdirectory(tests)
+endif()
+
+# ----------------------------
+# 13. Installation
+# ----------------------------
+install(TARGETS myapp myapp_lib
+    RUNTIME DESTINATION bin
+    LIBRARY DESTINATION lib
+    ARCHIVE DESTINATION lib
+)
+
+install(DIRECTORY include/ DESTINATION include)
+
+# ----------------------------
+# 14. Packaging (CPack)
+# ----------------------------
+include(CPack)
+set(CPACK_PACKAGE_NAME "MyApp")
+set(CPACK_PACKAGE_VERSION ${PROJECT_VERSION})
+set(CPACK_GENERATOR "ZIP;TGZ")
+set(CPACK_SOURCE_GENERATOR "TGZ")
+set(CPACK_PACKAGE_CONTACT "you@example.com")
+
+# ----------------------------
+# 15. Custom Command / Target
+# ----------------------------
+add_custom_target(print_version
+    COMMAND ${CMAKE_COMMAND} -E echo "Version: ${PROJECT_VERSION}"
+)
+
+✅ Example: tests/CMakeLists.txt
+add_executable(unit_tests test_main.cpp)
+target_link_libraries(unit_tests PRIVATE myapp_lib)
+
+add_test(NAME unit_tests COMMAND unit_tests)
+
+✅ Example Interview Questions This Covers
+Concept	Example Interview Question
+Basics	What does project() do in CMake?
+Build Type	How do you set a default build type?
+Shared vs Static	How do you toggle between shared/static libraries?
+Dependencies	How do you add an external dependency (e.g., fmt)?
+Installation	How does CMake's install() work?
+Packaging	How would you package your application with CPack?
+Testing	How do you enable and add tests using CMake?
+Modularization	How do you include and use custom modules in CMake?
