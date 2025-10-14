@@ -1,0 +1,88 @@
+1. What is Bazel and why would you use it over other build systems?
+
+Answer:
+Bazel is a fast, scalable, and extensible build system developed by Google. It supports large codebases with complex dependencies and enables incremental builds with fine-grained dependency tracking. Bazel is language-agnostic, supports multi-language builds, and provides hermetic and reproducible builds, making it ideal for monorepos and CI/CD pipelines. Compared to other systems like Make or Maven, Bazel excels in performance and correctness for large-scale projects.
+
+2. How does Bazel ensure build reproducibility and hermeticity?
+
+Answer:
+Bazel ensures hermetic builds by sandboxing actions, isolating build steps from the host environment to prevent unexpected influences like environment variables or system files. It tracks all inputs and outputs of build actions precisely, ensuring that given the same inputs, the outputs remain consistent, thus guaranteeing reproducibility. Additionally, Bazel caches results and can reuse them if the inputs haven't changed.
+
+3. Can you explain the basic structure of a Bazel workspace?
+
+Answer:
+A Bazel workspace is a directory that contains source files and a special file named WORKSPACE at its root, which defines external dependencies. Inside the workspace, there are subdirectories with BUILD or BUILD.bazel files that define build targets like libraries, binaries, and tests. These build files contain rules describing how to build and link code. The workspace is the root from which Bazel executes builds and tests.
+
+4. What are BUILD files and what do they typically contain?
+
+Answer:
+BUILD files are the core of Bazel build configuration within each package (directory). They contain build rules defining targets such as cc_library, java_binary, or py_test. Each rule specifies sources, dependencies, and build options. These files tell Bazel how to compile code, run tests, or generate artifacts. They're written in a Starlark language, a Python-like domain-specific language.
+
+5. How do you manage external dependencies in Bazel?
+
+Answer:
+External dependencies are managed in the WORKSPACE file using repository rules such as http_archive, git_repository, or local_repository. These rules fetch and integrate external code or libraries into the build. Bazel also supports dependency management through rules_jvm_external for Maven artifacts, rules_nodejs for npm packages, etc. This ensures dependencies are versioned, hermetic, and cached properly.
+
+6. What strategies do you use for debugging build failures in Bazel?
+
+Answer:
+
+Run bazel build with --verbose_failures to get detailed error messages.
+
+Use bazel query to inspect target dependencies and understand dependency graphs.
+
+Use bazel clean to remove caches if builds behave unexpectedly.
+
+Check sandboxing logs for environment issues.
+
+Look at generated build artifacts and intermediate files.
+
+Validate BUILD file syntax and dependencies for correctness.
+
+7. What is the difference between bazel build and bazel test?
+
+Answer:
+bazel build compiles and generates the build outputs (binaries, libraries, etc.) for the specified targets, whereas bazel test builds the test targets and then executes the tests. bazel test also collects and reports test results, handles flaky tests, and supports test result caching.
+
+8. How do you optimize Bazel build times?
+
+Answer:
+
+Use fine-grained dependencies to avoid rebuilding unrelated code.
+
+Enable remote caching and remote execution for distributed builds.
+
+Avoid unnecessary file system changes.
+
+Use incremental builds by only rebuilding changed targets.
+
+Split large targets into smaller modular ones.
+
+Use persistent workers or daemons for frequently invoked tools.
+
+Minimize external dependencies or vendor them efficiently.
+
+9. Explain how Bazel’s query command helps in build integration?
+
+Answer:
+bazel query allows you to inspect and analyze the dependency graph of targets. For example, you can find all dependencies of a target, reverse dependencies, or list targets by type. This helps in understanding how changes propagate, verifying dependencies, and diagnosing build issues during integration.
+
+10. Have you integrated Bazel with CI/CD pipelines? What are important considerations?
+
+Answer:
+Yes, integrating Bazel in CI/CD pipelines involves:
+
+Setting up remote caching to speed up builds across different agents.
+
+Using Bazel’s test and build commands with proper flags for reproducibility.
+
+Ensuring workspace dependencies are stable and available in CI environment.
+
+Using bazelisk to manage Bazel versions consistently.
+
+Handling environment variables and credentials securely.
+
+
+
+
+Monitoring build times and cache hit rates to optimize pipeline performance.
