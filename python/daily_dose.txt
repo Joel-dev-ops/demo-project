@@ -1,0 +1,85 @@
+1. Number-based Logic
+
+Check if a number is prime
+
+Check if a number is a palindrome
+
+Check if a number is Armstrong (narcissistic)
+
+Find factorial of a number
+
+Sum of digits of a number
+
+Reverse a number
+
+Check if a number is even or odd
+
+2. Sequence and Series Logic
+
+Fibonacci series (first n numbers)
+
+Sum of first n natural numbers
+
+Sum of squares or cubes of first n numbers
+
+Generate a series like 2, 4, 8, 16… (powers of 2)
+
+3. Array / List Problems
+
+Find largest or smallest element in an array
+
+Find second largest or second smallest element
+
+Check if an array is sorted
+
+Reverse an array
+
+Sum of all elements in an array
+
+Count occurrences of an element
+
+4. String Manipulation Problems
+
+Check if a string is a palindrome
+
+Count vowels/consonants in a string
+
+Reverse a string
+
+Check if two strings are anagrams
+
+Find the most frequent character
+
+5. Logical / Pattern Questions
+
+Print patterns with stars or numbers (triangle, pyramid, diamond)
+
+Print Pascal’s triangle
+
+Print multiplication table
+
+Print Floyd’s triangle
+
+6. Conditional Logic / Misc
+
+Leap year check
+
+Swap two numbers without using a third variable
+
+Find GCD / LCM of two numbers
+
+Check if a number is perfect or abundant
+
+Simple calculator using if-else or switch
+
+7. Advanced / Medium Logic
+
+Find duplicates in an array
+
+Remove duplicates from an array
+
+Find missing number in a sequence
+
+Check if a number is strong or happy
+
+Matrix operations (sum, transpose, multiplication)
