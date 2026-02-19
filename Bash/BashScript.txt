@@ -1,0 +1,17 @@
+What This Script Demonstrates (Senior-Level Concepts)
+Feature	Why It Matters
+set -euo pipefail	Prevents silent production failures
+trap	Ensures cleanup on failure
+flock	Prevents concurrent deployment runs
+retry()	Handles transient infra failures
+getopts	Proper CLI argument parsing
+Idempotency	Safe re-runs
+Arrays	Multi-service operations
+Background + wait	Async job control
+jq	JSON automation (Kubernetes, APIs)
+Logging with timestamps	Observability
+Debug mode	Troubleshooting support
+
+How to Run
+chmod +x script.sh
+./script.sh -e prod -v
